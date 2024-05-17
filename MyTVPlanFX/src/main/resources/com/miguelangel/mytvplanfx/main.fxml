@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="542.0" prefWidth="672.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.miguelangel.mytvplanfx.mytvplan.fx.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <HBox prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+        <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+            <Label text="Filter by type">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cbFilterType" prefWidth="200.0" VBox.vgrow="ALWAYS" onAction="#onClick_FilterType"/>
+        </VBox>
+        <VBox prefHeight="100.0" prefWidth="150.0">
+            <Label text="Filter by platform">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cbFilterPlatform" prefWidth="150.0" onAction="#onClick_FilterPlatform" />
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="150.0">
+            <Label text="Filter by category">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cbFilterCategory" prefWidth="150.0" onAction="#onClick_FilterCategory"/>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="150.0">
+            <Label text="Filter by rating">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cbFilterRating" prefWidth="150.0" onAction="#onClick_FilterRating"/>
+        </VBox>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <ListView fx:id="videoList" prefHeight="100.0" prefWidth="272.0" onMouseClicked="#onClick_FillInForm"/>
+        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                <VBox alignment="TOP_CENTER" prefHeight="382.0" prefWidth="120.0" spacing="40.0">
+                    <Label text="Title:" />
+                    <Label text="Type:" />
+                    <Label text="Platform:" />
+                    <Label text="Category:" />
+                    <Label text="Rating:" />
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" HBox.hgrow="ALWAYS">
+                    <TextField fx:id="tfTitle" />
+                    <ComboBox fx:id="cbType" prefWidth="600.0" VBox.vgrow="ALWAYS" />
+                    <ComboBox fx:id="cbPlatform" prefWidth="600.0" />
+                    <ComboBox fx:id="cbCategory" prefWidth="600.0" />
+                    <ComboBox fx:id="cbRating" prefWidth="600.0" />
+                    <HBox prefHeight="256.0" prefWidth="134.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                        <Button mnemonicParsing="false" onAction="#onClick_SaveVideo" text="Save" />
+                        <Button mnemonicParsing="false" onAction="#onClick_UpdateVideo" text="Update" />
+                        <Button mnemonicParsing="false" onAction="#onClick_DeleteVideo" text="Delete" textFill="#fc0000" />
+                    </HBox>
+                </VBox>
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>

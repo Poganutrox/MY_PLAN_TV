@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "366d3251-9bf4-402e-bed8-84fe57f38808",
+		"name": "MyTVPlan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32599316"
+	},
+	"item": [
+		{
+			"name": "(GET) /videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(GET) /videos/type/:type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/videos/type/mini-series",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"type",
+						"mini-series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(GET) /videos/platform/:platform",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/videos/platform/Netflix",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"platform",
+						"Netflix"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(GET) /videos/category/:category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/videos/category/science fiction",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"category",
+						"science fiction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(GET) /videos/rating/:rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/videos/rating/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"rating",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(POST) /videos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"El caliz de fuego\",\n    \"type\": \"series\",\n    \"platform\": \"Netflix\",\n    \"category\": \"adventures\",\n    \"rating\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(PUT) /videos/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Cuerpos\",\n    \"type\": \"movie\",\n    \"platform\": \"Netflix\",\n    \"category\": \"science fiction\",\n    \"rating\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/videos/65c01412c0f3195e4bb2293d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"65c01412c0f3195e4bb2293d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(DELETE) /videos/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/videos/65c01412c0f3195e4bb2293d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"65c01412c0f3195e4bb2293d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
